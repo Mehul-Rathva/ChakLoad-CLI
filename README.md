@@ -1,4 +1,9 @@
-# LoadTester CLI
+#       ____ _           _    _                    _ 
+#      / ___| |__   __ _| | _| |    ___   __ _  __| |
+#     | |   | '_ \ / _` | |/ / |   / _ \ / _` |/ _` |
+#     | |___| | | | (_| |   <| |__| (_) | (_| | (_| |
+#      \____|_| |_|\__,_|_|\_\_____\___/ \__,_|\__,_|
+#                                                    
 
 Comprehensive CLI tool for load testing web applications and Telegram bots with support for multiple frameworks (Locust, K6, Artillery, JMeter).
 
@@ -14,13 +19,13 @@ Comprehensive CLI tool for load testing web applications and Telegram bots with 
 ## Installation
 
 ```bash
-pip install loadtester-cli
+pip install chakload-cli
 ```
 
 Or using pipx:
 
 ```bash
-pipx install loadtester-cli
+pipx install chakload-cli
 ```
 
 After installation, run the tool using:

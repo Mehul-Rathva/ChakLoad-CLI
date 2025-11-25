@@ -27,12 +27,12 @@ def show_ascii_art():
     """Display ASCII art welcome message."""
     console = Console()
     ascii_art = r"""
-  ██╗  ██╗███████╗██████╗ ███████╗██████╗ ██╗███████╗██╗  ██╗
-  ██║  ██║██╔════╝██╔══██╗██╔════╝██╔══██╗██║██╔════╝██║  ██║
-  ███████║█████╗  ██████╔╝█████╗  ██████╔╝██║███████╗███████║
-  ██╔══██║██╔══╝  ██╔══██╗██╔══╝  ██╔══██╗██║╚════██║██╔══██║
-  ██║  ██║███████╗██████╔╝███████╗██████╔╝██║███████║██║  ██║
-  ╚═╝  ╚═╝╚══════╝╚═════╝ ╚══════╝╚═════╝ ╚═╝╚══════╝╚═╝  ╚═╝
+ ██████╗██╗  ██╗ █████╗ ██╗  ██╗██╗      ██████╗  █████╗ ██████╗
+██╔════╝██║  ██║██╔══██╗██║ ██╔╝██║     ██╔═══██╗██╔══██╗██╔══██╗
+██║     ███████║███████║█████╔╝ ██║     ██║   ██║███████║██║  ██║
+██║     ██╔══██║██╔══██║██╔═██╗ ██║     ██║   ██║██╔══██║██║  ██║
+╚██████╗██║  ██║██║  ██║██║  ██╗███████╗╚██████╔╝██║  ██║██████╔╝
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝
     """
     console.print(ascii_art, style="bold blue")
     console.print("[bold green]CHAKLOAD - Advanced Load Testing CLI[/bold green]")
@@ -109,11 +109,17 @@ def interactive_cmd():
             typer.echo("\n\nExiting LoadTester CLI...")
             break
 
+def clear_screen():
+    """Clear the terminal screen."""
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 # Make interactive the default command
 @app.callback(invoke_without_command=True)
 def default(ctx: typer.Context):
     """Default command that runs interactive mode if no subcommand is provided."""
     if ctx.invoked_subcommand is None:
+        clear_screen()  # Clear screen before showing ASCII art
         interactive_cmd()
 
 def handle_command(args):

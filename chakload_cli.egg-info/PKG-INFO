@@ -22,6 +22,7 @@ Classifier: Topic :: System :: Benchmark
 Classifier: Topic :: Utilities
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: typer>=0.9.0
 Requires-Dist: rich>=13.0.0
 Requires-Dist: PyYAML>=6.0
@@ -34,8 +35,16 @@ Requires-Dist: pytest-cov>=4.0; extra == "dev"
 Requires-Dist: black>=23.0; extra == "dev"
 Requires-Dist: flake8>=6.0; extra == "dev"
 Requires-Dist: mypy>=1.0; extra == "dev"
+Dynamic: license-file
 
-# LoadTester CLI
+```
+ ██████╗██╗  ██╗ █████╗ ██╗  ██╗██╗      ██████╗  █████╗ ██████╗ 
+██╔════╝██║  ██║██╔══██╗██║ ██╔╝██║     ██╔═══██╗██╔══██╗██╔══██╗
+██║     ███████║███████║█████╔╝ ██║     ██║   ██║███████║██║  ██║
+██║     ██╔══██║██╔══██║██╔═██╗ ██║     ██║   ██║██╔══██║██║  ██║
+╚██████╗██║  ██║██║  ██║██║  ██╗███████╗╚██████╔╝██║  ██║██████╔╝
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
+```
 
 Comprehensive CLI tool for load testing web applications and Telegram bots with support for multiple frameworks (Locust, K6, Artillery, JMeter).
 
@@ -51,13 +60,13 @@ Comprehensive CLI tool for load testing web applications and Telegram bots with 
 ## Installation
 
 ```bash
-pip install loadtester-cli
+pip install chakload-cli
 ```
 
 Or using pipx:
 
 ```bash
-pipx install loadtester-cli
+pipx install chakload-cli
 ```
 
 After installation, run the tool using:

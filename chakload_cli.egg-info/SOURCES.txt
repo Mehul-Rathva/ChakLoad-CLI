@@ -1,3 +1,4 @@
+LICENSE
 README.md
 pyproject.toml
 chakload_cli.egg-info/PKG-INFO
@@ -565,6 +566,12 @@ loadtester_env/Lib/site-packages/pip/_vendor/urllib3/util/ssltransport.py
 loadtester_env/Lib/site-packages/pip/_vendor/urllib3/util/timeout.py
 loadtester_env/Lib/site-packages/pip/_vendor/urllib3/util/url.py
 loadtester_env/Lib/site-packages/pip/_vendor/urllib3/util/wait.py
+loadtester_env/Lib/site-packages/pyfiglet/__init__.py
+loadtester_env/Lib/site-packages/pyfiglet/__main__.py
+loadtester_env/Lib/site-packages/pyfiglet/py.typed
+loadtester_env/Lib/site-packages/pyfiglet/test.py
+loadtester_env/Lib/site-packages/pyfiglet/version.py
+loadtester_env/Lib/site-packages/pyfiglet/fonts/__init__.py
 loadtester_env/Lib/site-packages/pygments/__init__.py
 loadtester_env/Lib/site-packages/pygments/__main__.py
 loadtester_env/Lib/site-packages/pygments/cmdline.py

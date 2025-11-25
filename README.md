@@ -20,8 +20,10 @@ Comprehensive CLI tool for load testing web applications and Telegram bots with 
 
 ## Installation
 
+https://pypi.org/project/chakload-cli/1.0.0/
+
 ```bash
-pip install chakload-cli
+pip install chakload-cli==1.0.0
 ```
 
 Or using pipx:

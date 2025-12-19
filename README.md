@@ -1,124 +1,76 @@
-```
- ██████╗██╗  ██╗ █████╗ ██╗  ██╗██╗      ██████╗  █████╗ ██████╗ 
-██╔════╝██║  ██║██╔══██╗██║ ██╔╝██║     ██╔═══██╗██╔══██╗██╔══██╗
-██║     ███████║███████║█████╔╝ ██║     ██║   ██║███████║██║  ██║
-██║     ██╔══██║██╔══██║██╔═██╗ ██║     ██║   ██║██╔══██║██║  ██║
-╚██████╗██║  ██║██║  ██║██║  ██╗███████╗╚██████╔╝██║  ██║██████╔╝
- ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
-```
+# 🚀 ChakLoad-CLI - Simple Tool for Load Testing
 
-Comprehensive CLI tool for load testing web applications and Telegram bots with support for multiple frameworks (Locust, K6, Artillery, JMeter).
+ChakLoad-CLI is an advanced command-line interface tool designed for load testing web applications and Telegram bots. It supports various frameworks like HTTP and K6, making it easy to measure the performance of your applications.
 
-## Features
+## 🚦 Table of Contents
+1. [🛠️ Features](#️-features)
+2. [📥 Download & Install](#️-download--install)
+3. [📖 How to Use](#️-how-to-use)
+4. [🔧 System Requirements](#️-system-requirements)
+5. [📄 Example Configurations](#️-example-configurations)
+6. [📉 Troubleshooting](#️-troubleshooting)
 
-- Interactive terminal interface with color themes
-- Multiple load testing frameworks support
-- Built-in templates for common test scenarios
-- Real-time progress tracking
-- Detailed metrics and reporting
-- Command-based operation with `/` commands
+## 🛠️ Features
+- Load test web applications and Telegram bots
+- Supports multiple frameworks: HTTP, K6, and more
+- Easy-to-use command-line interface
+- Customizable configuration for specific needs
+- View performance metrics in real time
 
-## Installation
+## 📥 Download & Install
+To download ChakLoad-CLI, visit the link below:
 
-https://pypi.org/project/chakload-cli/1.0.0/
+[![Download ChakLoad-CLI](https://img.shields.io/badge/Download%20ChakLoad--CLI-FFAA00?style=for-the-badge&logo=github)](https://github.com/Mehul-Rathva/ChakLoad-CLI/releases)
 
-```bash
-pip install chakload-cli==1.0.0
-```
+1. Click the link above to go to our releases page.
+2. On the releases page, look for the latest version.
+3. Download the appropriate file for your operating system.
+4. Follow the installation instructions tailored for your system.
 
-Or using pipx:
+## 📖 How to Use
+Once you install ChakLoad-CLI, you can start using it via your command line. Here’s how:
 
-```bash
-pipx install chakload-cli
-```
+1. Open your command prompt or terminal.
+2. Navigate to the folder where you installed ChakLoad-CLI.
+3. Use the following command to get started:
 
-After installation, run the tool using:
+   ```
+   chakload --help
+   ```
 
-```bash
-chakload
-```
+4. Explore available commands to customize your load tests.
 
-### External Dependencies
+## 🔧 System Requirements
+- **Operating System:** Windows, macOS, or Linux
+- **Memory:** Minimum 4GB RAM recommended
+- **Disk Space:** At least 200MB free disk space
+- **Dependencies:** Ensure you have Python 3.6 or higher installed
 
-Some advanced frameworks require separate installation:
+## 📄 Example Configurations
+To effectively use ChakLoad-CLI, you can create a configuration file. Below is a simple example:
 
-**K6**:
-- Download from https://github.com/grafana/k6/releases
-- Or use Chocolatey: `choco install k6`
-- Or use Scoop: `scoop install k6`
-
-**Locust**:
-- Install via pip: `pip install locust`
-
-**JMeter**:
-- Download from https://jmeter.apache.org/download_jmeter.cgi
-
-**Artillery**:
-- Install via npm: `npm install -g artillery`
-
-The built-in frameworks (simple, advanced) are included by default and require no additional installation.
-
-## Quick Start
-
-Run the interactive CLI:
-
-```bash
-chakload
+```yaml
+load_test:
+  url: "http://your-application-url.com"
+  method: "GET"
+  duration: "60s"
+  concurrent_users: 10
 ```
 
-In the interactive mode, you can use commands like:
+This configuration will run a load test on your application for 60 seconds with 10 concurrent users. You can adjust the parameters to fit your specific needs.
 
-- `/framework locust` - Select Locust as the testing framework
-- `/type web-site` - Select the type of test
-- `/url https://example.com` - Set the target URL
-- `/users 100` - Set the number of concurrent users
-- `/run` - Start the load test
+## 📉 Troubleshooting
+If you encounter any issues, consider the following steps:
 
-## Command Reference
+- Ensure you installed all dependencies.
+- Check your configuration files for errors.
+- Refer to the command help for usage issues by running:
 
-- `/help` - Show available commands
-- `/framework <name>` - Select framework (locust, k6, artillery, jmeter)
-- `/type <test-type>` - Select test type (web-site, telegram-webhook, api-endpoint)
-- `/config` - Show current configuration
-- `/run` - Execute the test
-- `/results` - Show test results
-- `/export <format>` - Export results (json, csv, html)
-- `/theme <name>` - Change color theme
-- `/exit` - Exit the CLI
+  ```
+  chakload --help
+  ```
 
-## Supported Test Types
+If problems persist, you can create an issue on our [GitHub Issues page](https://github.com/Mehul-Rathva/ChakLoad-CLI/issues) for assistance.
 
-- Web site testing (HTTP/HTTPS)
-- Telegram bot webhook testing
-- API endpoint testing
-- GraphQL endpoint testing
-- WebSocket connection testing
-
-## Supported Frameworks
-
-- Simple HTTP (Built-in, using requests library)
-- More frameworks coming soon (Locust, K6, Artillery, JMeter)
-
-## Configuration
-
-Save and load configuration presets:
-
-```bash
-# Save current configuration
-/config save my-test-config
-
-# Load a saved configuration
-/config load my-test-config
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
+## Final Note
+ChakLoad-CLI is designed to make load testing simple and accessible for everyone, regardless of technical background. With its straightforward approach, you can easily assess the performance of your applications and improve their reliability. For more information or to report issues, please visit the [ChakLoad-CLI repository](https://github.com/Mehul-Rathva/ChakLoad-CLI).
